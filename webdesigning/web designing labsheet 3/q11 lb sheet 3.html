@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="box" style="width:200px;padding:50px;background:lightgray;">
+    Move mouse here
+</div>
+
+<script>
+let box = document.getElementById("box");
+
+box.addEventListener("mouseover", function() {
+    box.style.backgroundColor = "lightblue";
+});
+
+box.addEventListener("mouseout", function() {
+    box.style.backgroundColor = "lightgray";
+});
+</script>
+
+</body>
+</html>

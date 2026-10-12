@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="rows" type="number" placeholder="Rows">
+<input id="cols" type="number" placeholder="Columns">
+<button onclick="generateTable()">Generate</button>
+
+<div id="table"></div>
+
+<script>
+function generateTable() {
+    let rows = Number(document.getElementById("rows").value);
+    let cols = Number(document.getElementById("cols").value);
+
+    let table = document.createElement("table");
+    table.border = "1";
+
+    for (let i = 1; i <= rows; i++) {
+        let tr = document.createElement("tr");
+
+        for (let j = 1; j <= cols; j++) {
+            let td = document.createElement("td");
+            td.innerHTML = "Row " + i + ", Col " + j;
+            tr.appendChild(td);
+        }
+
+        table.appendChild(tr);
+    }
+
+    document.getElementById("table").innerHTML = "";
+    document.getElementById("table").appendChild(table);
+}
+</script>
+
+</body>
+</html>

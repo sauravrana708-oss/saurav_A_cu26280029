@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="a" type="number" placeholder="First number">
+<input id="b" type="number" placeholder="Second number">
+
+<br><br>
+<button id="add">+</button>
+<button id="sub">-</button>
+<button id="mul">*</button>
+<button id="div">/</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calculate(operator) {
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let result;
+
+    if (operator === "+") result = a + b;
+    if (operator === "-") result = a - b;
+    if (operator === "*") result = a * b;
+    if (operator === "/") result = a / b;
+
+    document.getElementById("result").innerHTML = "Result: " + result;
+}
+
+document.getElementById("add").addEventListener("click", () => calculate("+"));
+document.getElementById("sub").addEventListener("click", () => calculate("-"));
+document.getElementById("mul").addEventListener("click", () => calculate("*"));
+document.getElementById("div").addEventListener("click", () => calculate("/"));
+</script>
+</body>
+</html>

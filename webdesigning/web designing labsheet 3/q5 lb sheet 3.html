@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="result"></div>
+
+<script>
+function palindrome(str) {
+    let reverse = str.split("").reverse().join("");
+
+    if (str.toLowerCase() === reverse.toLowerCase()) {
+        return "Palindrome";
+    } else {
+        return "Not a Palindrome";
+    }
+}
+
+let text = prompt("Enter a string:");
+
+document.getElementById("result").innerHTML =
+    "Original: " + text +
+    "<br>Reversed: " + text.split("").reverse().join("") +
+    "<br>" + palindrome(text);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="result"></div>
+
+<script>
+let numbers = [10, 5, 30, 20];
+
+numbers.push(40);       // Add
+numbers.pop();          // Remove last element
+numbers.sort((a, b) => a - b); // Sort
+
+let doubled = numbers.map(n => n * 2);
+let filtered = numbers.filter(n => n > 10);
+
+document.getElementById("result").innerHTML =
+    "Array: " + numbers +
+    "<br>Doubled: " + doubled +
+    "<br>Greater than 10: " + filtered;
+</script>
+</body>
+</html>

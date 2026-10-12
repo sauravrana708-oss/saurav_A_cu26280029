@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="result"></div>
+
+<script>
+const add = (a, b) => a + b;
+
+let student = {
+    name: "Saurav",
+    age: 21,
+    course: "B.Sc"
+};
+
+// Destructuring
+let { name, age, course } = student;
+
+// Template literal
+let message = `Name: ${name}<br>
+Age: ${age}<br>
+Course: ${course}<br>
+Addition: ${add(10, 20)}`;
+
+document.getElementById("result").innerHTML = message;
+</script>
+</body>
+</html>

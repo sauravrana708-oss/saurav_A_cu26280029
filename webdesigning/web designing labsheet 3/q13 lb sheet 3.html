@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="inc">Increment</button>
+<button id="dec">Decrement</button>
+
+<h2 id="count">0</h2>
+
+<script>
+function counter() {
+    let count = 0;
+
+    return {
+        increment: function() {
+            return ++count;
+        },
+        decrement: function() {
+            return --count;
+        }
+    };
+}
+
+let c = counter();
+
+document.getElementById("inc").addEventListener("click", function() {
+    document.getElementById("count").innerHTML = c.increment();
+});
+
+document.getElementById("dec").addEventListener("click", function() {
+    document.getElementById("count").innerHTML = c.decrement();
+});
+</script>
+
+</body>
+</html>

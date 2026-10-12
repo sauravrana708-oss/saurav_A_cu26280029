@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="result"></div>
+
+<script>
+let student = {
+    name: "Saurav",
+    age: 21,
+    course: "B.Sc Computer Science",
+
+    display: function() {
+        return "Name: " + this.name +
+               "<br>Age: " + this.age +
+               "<br>Course: " + this.course;
+    }
+};
+
+document.getElementById("result").innerHTML = student.display();
+</script>
+</body>
+</html>

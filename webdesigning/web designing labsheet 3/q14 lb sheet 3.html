@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="result"></div>
+
+<script>
+let json = '{"name":"Saurav","age":21}';
+
+try {
+    let data = JSON.parse(json);
+    document.getElementById("result").innerHTML =
+        "Name: " + data.name + "<br>Age: " + data.age;
+}
+catch (error) {
+    document.getElementById("result").innerHTML =
+        "Invalid JSON: " + error.message;
+}
+finally {
+    console.log("JSON processing completed.");
+}
+</script>
+</body>
+</html>

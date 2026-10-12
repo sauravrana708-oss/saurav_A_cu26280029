@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Fibonacci Series</h3>
+<div id="result"></div>
+
+<script>
+let n = Number(prompt("Enter number of terms:"));
+let a = 0, b = 1;
+let output = "";
+
+for (let i = 1; i <= n; i++) {
+    output += a + " ";
+    let next = a + b;
+    a = b;
+    b = next;
+}
+
+document.getElementById("result").innerHTML = output;
+</script>
+</body>
+</html>

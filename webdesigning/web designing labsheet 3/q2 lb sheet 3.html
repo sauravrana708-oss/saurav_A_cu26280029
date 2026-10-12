@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Prime Number Checker</h3>
+<div id="result"></div>
+
+<script>
+function checkNumber() {
+    let n = Number(prompt("Enter a number:"));
+    let result = "";
+
+    if (n <= 1) {
+        result = "Neither prime nor composite";
+    } else {
+        let prime = true;
+
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                prime = false;
+                break;
+            }
+        }
+
+        result = prime ? n + " is Prime" : n + " is Composite";
+    }
+
+    document.getElementById("result").innerHTML = result;
+}
+
+checkNumber();
+</script>
+</body>
+</html>
