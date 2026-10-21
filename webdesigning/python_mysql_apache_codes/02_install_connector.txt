@@ -1,0 +1,11 @@
+Create and activate a virtual environment:
+python -m venv .venv
+# Windows:
+.venv\\Scripts\\activate
+# Linux/macOS:
+source .venv/bin/activate
+
+Install connector libraries:
+python -m pip install mysql-connector-python PyMySQL
+Verify:
+python -c "import mysql.connector, pymysql; print('Connectors installed')"
